@@ -1,28 +1,77 @@
 /* CSS Stylesheet for Javascript Turing machine simulator */
 
+
+
 body {
   text-align: center;
   
   font-family: sans-serif;
 }
 
-#Machine {
-  border: 2px solid #ff6666;
-/*  background-color: #dfdfda; */
-/*  background-color: #ffe1e1; */
-  background-color: #ffefda;
-  padding-top: 0.5em;
-  padding-bottom: 0.25em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-/*  height: 10em; */
+.heading {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 55px;
+  color: #fff; /* White text color for better contrast */
   text-align: center;
-  display: inline-block;
+  margin: 40px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+  letter-spacing: 1px; /* Adjust letter spacing for better readability */
+  text-transform: uppercase; /* Uppercase text */
+  background-color: #87ceeb;; /* Blue background color */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Rounded corners for the heading */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
+
+/* Optional hover effect */
+.heading:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+#Machine {
+  width: 80%; /* Adjust the width as needed */
+  margin: 20px auto; /* Center the div horizontally with some margin */
+  padding: 20px; /* Add padding for spacing */
+  background: linear-gradient(to bottom, #CBC3E3, #c47ab8); /* Gradient background */
+  border: 1px solid #b3b3b3; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+#Machine h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  color: #333; /* Heading color */
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+#Machine p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #666; /* Text color */
+  line-height: 1.6; /* Line height for better readability */
+  text-align: justify; /* Justify the text */
+}
+
+#tape-head {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+  padding: 10px 20px; /* Add padding for spacing */
+  background-color: #3498db; /* Blue background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+
+
+
+
 
 .BoxTitle {
   position: relative;
@@ -50,21 +99,24 @@ body {
 }
 
 #MachineTape {
-  background-color: #eee8aa;
+  background: linear-gradient(180deg, #f3b6c3, #f9dae1);;
   padding-top: 10px;
   padding-left: 0px;
   font-size: x-large;
   margin-bottom: 1em;
   overflow: auto;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
 .tape {
   display: inline;
-  font-family: "Courier New", courier;
+  font-family: monospace;
+  font-size: 40px;
   padding: 0;
   margin: 0;
+  overflow-y: hidden;
 }
 
 .OneDirectionalTape {
@@ -82,16 +134,17 @@ body {
 }
 
 #ActiveTape {
-  color: red;
-  border: 1px solid LightGrey;
+  color: #5a11b6;
+  border: 1px LightGrey;
   font-weight: bold;
-  background-color: #bbf8ff;
+  font-family: math;
+  background-color: #ffff66;
 }
 
 #ActiveTapeArea {
   position: relative;
   display: inline;
-  padding: 0;
+  padding: 1px;
   margin: 0;
 }
 
@@ -119,12 +172,13 @@ body {
 }
 
 .MachineStatusBox {
-  border: 1px solid grey;
-  padding-top: 12px;
+  border: 2px solid #9e228a ;
+  border-radius: 10px;
+  padding-top: 0.25em;
   padding-bottom: 0.25em;
   padding-left: 0.25em;
   padding-right: 0.25em;
-  margin-top: 5px;
+  margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 0;
   margin-right: 0;
@@ -245,43 +299,21 @@ button {
 
 /* Triangle using css tricks */
 .HeadTop {
-  height: 10px;
-  width: 0px;
+ 
 }
 
 /* Arrow outline */
 .HeadTop:before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-bottom: 10px solid #333333;
+  
 }
 
 /* Arrow interior */
 .HeadTop:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  margin-top:1px;
-  margin-left:2px;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 9px solid #ff9933;
+ 
 }
 
 .HeadBody {
-  width: 32px;
-  height: 14px;
-  text-align: center;
-  font-size: small;
-  background: #ff9933;
-  border-left: 1px solid #333333;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+ 
 }
 
 
@@ -289,10 +321,17 @@ button {
 
 /** Miscellaneous **/
 #IntroText {
-  text-align: left;
-  padding-left: 10%;
-  padding-right: 10%;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #333; /* Text color */
+  text-align: left; /* Text alignment */
+  padding: 20px; /* Padding for spacing */
+  border: 1px solid #ccc; /* Border for the div */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8f9fa; /* Background color */
+  font-style: italic;
 }
+
 
 h1 {
   margin-bottom: 0.2em;

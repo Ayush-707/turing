@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link href="turing.css" rel="stylesheet" type="text/css">
   <link href="textarea.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/6b76a56a3a.js" crossorigin="anonymous"></script>
   <title>
    Turing machine simulator
   </title>
@@ -20,37 +21,17 @@
 
  <body onload="OnLoad();">
   <div id="Header">
-   <h1>Turing machine simulator</h1>
-   <div class="backlinks">
-    [<a href="http://morphett.info/">Back to home page</a>]
-   </div>
+   <h1 class="heading">Turing machine Visualizer</h1>
+   
    <div id="IntroText">
-    This is a <a href="http://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> simulator.
-    To use it:<br>
-    <ol>
-     <li>
-      <a href="#LoadMenu" onclick="$('#LoadMenu').slideDown();">Load one of the example programs</a>, or write your own in the Turing machine program area.  See <a href="#SyntaxInfo">below for syntax</a>.
-     </li>
-     <li>
-      Enter something in the 'Input' area - this will be written on the tape initially as input to the machine. Click 'Reset' to initialise the machine.
-     </li>
-     <li>
-      Click on 'Run' to start the Turing machine and run it until it halts (if ever).
-      Click on 'Pause' to interrupt the Turing machine while it is running.
-      Alternately, click 'Step' to run a single step of the Turing machine.
-     </li>
-     <li>
-      Click 'Reset' to restore the Turing machine to its initial state so it can be run again.
-     </li>
-    </ol>
-   </div>
+    A Turing machine is a finite automaton that can read, write, and erase symbols on an infinitely long tape. The tape is divided into squares, and each square contains a symbol. The Turing machine can only read one symbol at a time, and it uses a set of rules (the transition function) to determine its next action based on the current state and the symbol it is reading.
   </div>
   <div id="Machine">
    <div id="MachineTapeContainer">
-    <div class="BoxTitle">Tape</div>
+   <h3 id = 'tape-head'>MACHINE TAPE</h3>
     <div id="MachineTape" class="MachineStatusBox" title="This is the Turing machine's tape. The head position is indicated by the highlighted cell and arrow.">
      <!-- the following pre elements must be on a single line with no whitespace between them !-->
-     <div id="RunningTapeDisplay" aria-live="polite"><div id="TapeValues"><pre id="LeftTape" class="tape"></pre><div id="ActiveTapeArea"><pre id="ActiveTape" class="tape"> </pre><div id="MachineHead"><div class="HeadTop"></div><div class="HeadBody">Head</div></div></div><pre id="RightTape" class="tape"></pre></div></div>
+     <div id="RunningTapeDisplay" aria-live="polite"><div id="TapeValues"><pre id="LeftTape" class="tape"></pre><div id="ActiveTapeArea"><pre id="ActiveTape" class="tape"> </pre><div id="MachineHead"><div class="HeadTop"></div><div class="HeadBody"><i class="fa-solid fa-arrow-up"></i></div></div></div><pre id="RightTape" class="tape"></pre></div></div>
     </div> <!-- div MachineTape !-->
    </div>
 
